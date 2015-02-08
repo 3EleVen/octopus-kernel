@@ -105,6 +105,7 @@ obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI4_DEV)	+= synaptics_rmi_dev.o
 obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE) 	+= synaptics_fw_update.o
 obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4)		+= synaptics_i2c_rmi4.o
 obj-$(CONFIG_TOUCHSCREEN_GT9XX)		+= gt9xx/
+obj-y += touchboost.o
 obj-$(CONFIG_MSG28XX_TOUCHPANEL_DRIVER)		+= msg2838/
 obj-$(CONFIG_TOUCHSCREEN_BU21150)	+= bu21150.o
 obj-$(CONFIG_INPUT_MT_WRAPPER)		+= input_mt_wrapper.o
@@ -113,3 +114,4 @@ obj-$(CONFIG_TOUCHSCREEN_GSL1688E) += gsl_ts_driver.o gsl_ReadArrayData.o gsl_po
 #	cp $(srctree)/$(obj)/gsl_point_id $(obj)/gsl_point_id.o
 
 obj-$(CONFIG_TOUCHSCREEN_DOUBLETAP2WAKE)        += doubletap2wake.o
+
