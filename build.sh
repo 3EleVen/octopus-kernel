@@ -19,7 +19,6 @@ restore='\033[0m'
 nocol='\033[0m'
 
 # Device varibles (Modify this)
-kname= '' # Your Kernel Name
 device='' # Device Id
 base_version='' # Kernel Id
 version='' # Kernel Version
@@ -42,7 +41,7 @@ rm $MODULES_DIR/liboutput/tools/Image
 	cp $KERNEL_DIR/arch/arm/boot/Image  $MODULES_DIR/liboutput/tools
 	cp $KERNEL_DIR/arch/arm/boot/dt.img  $MODULES_DIR/liboutput/tools
 	cd $MODULES_DIR/liboutput/
-	zipfile="$kname-$version-$(date +"%Y-%m-%d(%I.%M%p)").zip"
+	zipfile="$version-$(date +"%Y-%m-%d(%H:%M)").zip"
 	echo $zipfile
 	zip -r $zipfile tools META-INF system -x *kernel/.gitignore*
 	BUILD_END=$(date +"%s")
