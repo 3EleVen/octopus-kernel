@@ -404,6 +404,12 @@ static int create_persistent_stats_groups(void)
 	int ret;
 	struct cpu_persistent_stats *cpu_stats;
 
+	/* Create toplevel persistent stats kobject. */
+	ret = cpufreq_get_global_kobject();
+
+	if (ret)
+		return ret;
+
 	persistent_stats.persistent_stats_kobj =
 		kobject_create_and_add(persistent_stats.name,
 			cpufreq_global_kobject);
