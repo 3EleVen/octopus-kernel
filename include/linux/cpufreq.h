@@ -447,6 +447,21 @@ extern struct cpufreq_governor cpufreq_gov_pegasusq;
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_BARRY_ALLEN)
 extern struct cpufreq_governor cpufreq_gov_barry_allen;
 #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_barry_allen)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE)
+extern struct cpufreq_governor cpufreq_gov_intelliactive;
+#define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_intelliactive)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND)
+extern struct cpufreq_governor cpufreq_gov_intellidemand;
+#define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_intellidemand)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_YANKZACTIVE)
+extern struct cpufreq_governor cpufreq_gov_yankzactive;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_yankzactive)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_ZZMOOVE)
+extern struct cpufreq_governor cpufreq_gov_zzmoove;
+#define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_zzmoove)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_DARKNESS)
+extern struct cpufreq_governor cpufreq_gov_darkness;
+#define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_darkness)
 #endif
 
 /*********************************************************************
