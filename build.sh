@@ -19,16 +19,16 @@ restore='\033[0m'
 nocol='\033[0m'
 
 # Device varibles (Modify this)
-device='wt88047' # Device Id
-base_version='octopus' # Kernel Id
-version='test' # Kernel Version
+device='' # Device Id
+base_version='' # Kernel Id
+version='' # Kernel Version
 
 export USE_CCACHE=1
 export ARCH=arm
 export SUBARCH=arm
-export CROSS_COMPILE=/android/5-google/bin/arm-eabi-
-export KBUILD_BUILD_USER="octo21"
-export KBUILD_BUILD_HOST="cyanogenmod"
+export CROSS_COMPILE=/your/toolchains/path
+export KBUILD_BUILD_USER="" # Build Host
+export KBUILD_BUILD_HOST="" # Build Name
 
 MODULES_DIR=$KERNEL_DIR/FileOutput
 
@@ -41,7 +41,7 @@ rm $MODULES_DIR/liboutput/tools/Image
 	cp $KERNEL_DIR/arch/arm/boot/Image  $MODULES_DIR/liboutput/tools
 	cp $KERNEL_DIR/arch/arm/boot/dt.img  $MODULES_DIR/liboutput/tools
 	cd $MODULES_DIR/liboutput/
-	zipfile="octopus-$version-$(date +"%Y-%m-%d(%H.%M)").zip"
+	zipfile="$version-$(date +"%Y-%m-%d(%H:%M)").zip"
 	echo $zipfile
 	zip -r $zipfile tools META-INF system -x *kernel/.gitignore*
 	BUILD_END=$(date +"%s")
