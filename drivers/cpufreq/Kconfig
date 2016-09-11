@@ -151,10 +151,6 @@ config CPU_FREQ_DEFAULT_GOV_BARRY_ALLEN
 config CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE
   bool "intelliactive"
   select CPU_FREQ_GOV_INTELLIACTIVE
-    
-config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
-  bool "intellidemand"
-  select CPU_FREQ_GOV_INTELLIDEMAND
 
 config CPU_FREQ_DEFAULT_GOV_YANKACTIVE
 	bool "yankactive"
@@ -380,10 +376,6 @@ config CPU_BOOST
   
 config CPU_FREQ_GOV_INTELLIACTIVE
 	tristate "'intelliactive' cpufreq governor"
-	depends on CPU_FREQ
- 
-config CPU_FREQ_GOV_INTELLIDEMAND
-	tristate "'intellidemand' cpufreq governor"
 	depends on CPU_FREQ
 
 config CPU_FREQ_GOV_HYPER
